@@ -1,0 +1,18 @@
+#Factory Girl Rails  
+
+Factory_girl_rails  is a rails gem that is used to create factories or instances that can be used in tests. For example lets say I am testing a user controller and want to test certain actions with a user instance, instead of having to type out this instance every time I can create a factory and call that instead. Since you can create mutliple factories you can easily test things such as valid or invalid users just by changing your factories or creating new one with the attributes you want to test. To start using factory girl add 'factory_girl_rails' to your gem file, then bundle install. You will probably want to have rspec as well. after factory girl is installed create a factories folder inside your spec folder. inside of that folder you add your factories.its good convention to name the factory the same as the model/controller you will be testing. so if you have a user_spec.rb name your factory user.rb. to see the syntax for setting up a factory once the file is created check out the [docs](http://rubydoc.info/gems/factory_girl/4.4.0/frames) or the [github page](https://github.com/thoughtbot/factory_girl/blob/master/GETTING_STARTED.md). Once a factory is created simply call it like so FactoryGirl.create(:nameofthefactory).
+
+1.Tips
+	* Dont define multiple factories with the same name, it will cause an error
+	* Create factories that test specific things. for example make factories to make validations pass as well as fail.
+	* You can use another gem called [faker](https://github.com/stympy/faker) to generate random names, telephone number and a whole bumnch of other stuff. 
+	* Some older examples of factory girl on line might Have something like Factory.create but this has been depreacated and removed So just make it FactoryGirl.create.
+
+2.Helpful Links
+ *[docs](http://rubydoc.info/gems/factory_girl/4.4.0/frames)
+ *[github page](https://github.com/thoughtbot/factory_girl/blob/master/GETTING_STARTED.md)
+ *[factory girl tips](http://arjanvandergaag.nl/blog/factory_girl_tips.html)
+ *[stack over flow on factory girl](http://stackoverflow.com/questions/tagged/factory-girl)
+
+	
+	
